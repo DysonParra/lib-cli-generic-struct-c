@@ -72,7 +72,7 @@ BOOL APIENTRY DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved) {
 #endif
 
 /**
- * FIXME: Definición de {@code printArray}.
+ * FIXME: Description of {@code printArray}.
  * Imprime un array sin los caracteres de escape.
  */
 CALLING void printArray(char* array) {
@@ -103,7 +103,7 @@ CALLING void printArray(char* array) {
 }
 
 /**
- * FIXME: Definición de {@code sprintArray}.
+ * FIXME: Description of {@code sprintArray}.
  * Copia un array de entrada en otro sin los caracteres de escape.
  */
 CALLING void sprintArray(char* output, char* input) {
@@ -134,7 +134,7 @@ CALLING void sprintArray(char* output, char* input) {
 }
 
 /**
- * FIXME: Definición de {@code UpdateGenericStrucsLevels}.
+ * FIXME: Description of {@code UpdateGenericStrucsLevels}.
  * Actualiza el nivel de un GenericStruct y sus descendientes.
  */
 CALLING void UpdateGenericStrucsLevels(GenericStruct* root, int level) {
@@ -153,7 +153,7 @@ CALLING void UpdateGenericStrucsLevels(GenericStruct* root, int level) {
 }
 
 /**
- * FIXME: Definición de {@code setValue}.
+ * FIXME: Description of {@code setValue}.
  * Obtiene un string con el valor indicado en el heap.
  */
 LANGUAGE DLLIMPORT CALLING char* setValue(char* value) {
@@ -171,7 +171,7 @@ LANGUAGE DLLIMPORT CALLING char* setValue(char* value) {
 }
 
 /**
- * FIXME: Definición de {@code newGenericStruct}.
+ * FIXME: Description of {@code newGenericStruct}.
  * Crea un nuevo GenericStruct y asociarlo a un GenericStruct parámetro brother que dirá si es un hermano (diferente a 0), o un hijo (0).
  */
 LANGUAGE DLLIMPORT CALLING GenericStruct* newGenericStruct(char* identifier, GenericStruct* ref, int brother, void* concrete, void (*getPrintValue)(GenericStruct*, int, int, int, char*)) {
@@ -227,7 +227,7 @@ LANGUAGE DLLIMPORT CALLING GenericStruct* newGenericStruct(char* identifier, Gen
 }
 
 /**
- * FIXME: Definición de {@code addGenericStructChild}.
+ * FIXME: Description of {@code addGenericStructChild}.
  * Asigna un nuevo hijo a un GenericStruct.
  */
 LANGUAGE DLLIMPORT CALLING void addGenericStructChild(GenericStruct* father, GenericStruct* newChild) {
@@ -251,7 +251,7 @@ LANGUAGE DLLIMPORT CALLING void addGenericStructChild(GenericStruct* father, Gen
 }
 
 /**
- * TODO: Definición de {@code getGenericStructPrintOutDebug}.
+ * TODO: Description of {@code getGenericStructPrintOutDebug}.
  */
 CALLING void getGenericStructPrintOutDebug(GenericStruct* generic, int position, int open, char* output) {
     if (generic == NULL || position == 0)       // void.
@@ -287,7 +287,7 @@ CALLING void getGenericStructPrintOutDebug(GenericStruct* generic, int position,
 }
 
 /**
- * TODO: Definición de {@code getGenericStructPrintOutDefault}.
+ * TODO: Description of {@code getGenericStructPrintOutDefault}.
  */
 CALLING void getGenericStructPrintOutDefault(GenericStruct* generic, int position, int open, char* output) {
     if (generic == NULL || position == 0)   // void.
@@ -323,7 +323,7 @@ CALLING void getGenericStructPrintOutDefault(GenericStruct* generic, int positio
 }
 
 /**
- * TODO: Definición de {@code getGenericStructPrintOutAsObjectNoLf}.
+ * TODO: Description of {@code getGenericStructPrintOutAsObjectNoLf}.
  */
 CALLING void getGenericStructPrintOutAsObjectNoLf(GenericStruct* generic, int position, int open, char* output) {
     if (generic == NULL || position == 0)   // void.
@@ -367,7 +367,7 @@ CALLING void getGenericStructPrintOutAsObjectNoLf(GenericStruct* generic, int po
 }
 
 /**
- * TODO: Definición de {@code getGenericStructPrintOutAsObjectWithLf}.
+ * TODO: Description of {@code getGenericStructPrintOutAsObjectWithLf}.
  */
 CALLING void getGenericStructPrintOutAsObjectWithLf(GenericStruct* generic, int position, int open, char* output) {
     if (generic == NULL || position == 0)   // void.
@@ -464,7 +464,7 @@ CALLING void getGenericStructPrintOutAsObjectWithLf(GenericStruct* generic, int 
 }
 
 /**
- * TODO: Definición de {@code getGenericStructPrintOutNoLf}.
+ * TODO: Description of {@code getGenericStructPrintOutNoLf}.
  */
 CALLING void getGenericStructPrintOutNoLf(GenericStruct* generic, int position, int open, char* output) {
     if (generic == NULL || position == 0)   // void.
@@ -517,7 +517,7 @@ CALLING void getGenericStructPrintOutNoLf(GenericStruct* generic, int position, 
 }
 
 /**
- * TODO: Definición de {@code getGenericStructPrintOut}.
+ * TODO: Description of {@code getGenericStructPrintOut}.
  */
 CALLING void getGenericStructPrintOut(GenericStruct* generic, int position, int open, int debug, char* output) {
     if (!debug) {
@@ -530,7 +530,7 @@ CALLING void getGenericStructPrintOut(GenericStruct* generic, int position, int 
 }
 
 /**
- * FIXME: Definición de {@code findGenericStructMaxLevel}.
+ * FIXME: Description of {@code findGenericStructMaxLevel}.
  * Obtiene la mayor profundidad de un GenericStruct.
  */
 LANGUAGE DLLIMPORT CALLING int findGenericStructMaxLevel(GenericStruct* firstGenericStruct, int level) {
@@ -552,7 +552,7 @@ LANGUAGE DLLIMPORT CALLING int findGenericStructMaxLevel(GenericStruct* firstGen
 }
 
 /**
- * FIXME: Definición de {@code printAllGenericStruct}.
+ * FIXME: Description of {@code printAllGenericStruct}.
  * Muestra una estructura genérica, childs dice si imprime todos sus hijos y brother dice si imprime todos sus hermanos, tab1 indica la cantidad de tabulaciones antes de imprimir cada estructura.
  */
 CALLING void printAllGenericStruct(FILE* file, GenericStruct* firstGeneric, int childs, int brothers, int tab1, int tab2, int debug) {
@@ -656,7 +656,7 @@ CALLING void printAllGenericStruct(FILE* file, GenericStruct* firstGeneric, int 
 }
 
 /**
- * FIXME: Definición de {@code printGenericStruct}.
+ * FIXME: Description of {@code printGenericStruct}.
  * Invoca al método que imprime los GenericStruct.
  */
 LANGUAGE DLLIMPORT CALLING void printGenericStruct(char* fileSource, char* openType, GenericStruct* root, int childs, int debug) {
